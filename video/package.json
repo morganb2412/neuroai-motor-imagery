@@ -1,0 +1,31 @@
+{
+  "name": "moe-neuroai-research-video",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "preview": "remotion studio src/index.ts --port 3001",
+    "render": "remotion render src/index.ts MoeNeuroAIResearchTikTok ../out/moe-neuroai-research-tiktok.mp4 --codec h264 --concurrency 2",
+    "typecheck": "tsc --noEmit",
+    "ai:generate": "../.venv/bin/python scripts/ai-voice.py generate",
+    "ai:process": "sh scripts/process-ai-voice.sh",
+    "ai:verify": "../.venv/bin/python scripts/ai-voice.py verify",
+    "ai:build": "../.venv/bin/python scripts/ai-voice.py build",
+    "ai:test": "../.venv/bin/python scripts/ai-voice.py test",
+    "render:ai": "../.venv/bin/python scripts/ai-voice.py verify && remotion render src/index.ts MoeNeuroAIResearchTikTok ../out/moe-neuroai-research-ai-voice.mp4 --props=ai-voice-props.json --codec h264 --concurrency 2",
+    "ai:test-render": "../.venv/bin/python scripts/prepare-audio-test.py && remotion render scripts/audio-test.tsx AudioIntegrationCheck ../out/verification/ai-audio-test.mp4 --codec h264 --concurrency 2"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.532",
+    "@remotion/renderer": "4.0.532",
+    "lucide-react": "0.468.0",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "remotion": "4.0.532"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.0",
+    "@types/react-dom": "19.1.0",
+    "typescript": "5.8.3"
+  }
+}

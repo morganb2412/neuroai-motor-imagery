@@ -1,0 +1,9 @@
+# Python 3.11+. Exact verified versions are recorded in experiments/experiment_001/environment.lock.txt.
+mne>=1.8,<2
+numpy>=1.26,<3
+pandas>=2.2,<4
+scipy>=1.12,<2
+scikit-learn>=1.5,<2
+matplotlib>=3.8,<4
+jupyter>=1.0,<2
+ipykernel>=6.29,<8

@@ -1,0 +1,69 @@
+{
+  "status": "passed",
+  "python": "3.11.3",
+  "packages": {
+    "mne": "1.13.2",
+    "numpy": "2.4.6",
+    "pandas": "3.0.6",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.9.1",
+    "matplotlib": "3.11.2",
+    "jupyter": "1.1.1",
+    "ipykernel": "7.4.0"
+  },
+  "config": {
+    "experiment_id": "experiment_001",
+    "subject": 1,
+    "runs": [
+      4,
+      8,
+      12
+    ],
+    "l_freq": 8.0,
+    "h_freq": 30.0,
+    "tmin": 1.0,
+    "tmax": 4.0,
+    "baseline": null,
+    "reject": null,
+    "reference": "as recorded",
+    "random_state": 42,
+    "dataset_version": "1.0.0"
+  },
+  "retained_epochs": {
+    "left_hand": 23,
+    "right_hand": 22
+  },
+  "candidate_epochs": 45,
+  "drop_reasons": {},
+  "channels": 64,
+  "sfreq": 160.0,
+  "files": [
+    {
+      "path": "data/raw/MNE-eegbci-data/files/eegmmidb/1.0.0/S001/S001R04.edf",
+      "sha256": "3d161f88e1c00632585287d2ce584c2bc0f08862438eb255ea8723e00fac693d"
+    },
+    {
+      "path": "data/raw/MNE-eegbci-data/files/eegmmidb/1.0.0/S001/S001R08.edf",
+      "sha256": "358fb5189220725141968ae285fbe9e3f36210b834ffba71d940af308e3aca68"
+    },
+    {
+      "path": "data/raw/MNE-eegbci-data/files/eegmmidb/1.0.0/S001/S001R12.edf",
+      "sha256": "2b281c9b687b4c4176e83251d74743721f2d6ebd76656a972a3b9c44d9d88cd5"
+    }
+  ],
+  "figures": [
+    "results/figures/01_dataset_exploration-cell5-figure1.png",
+    "results/figures/01_dataset_exploration-cell7-figure1.png",
+    "results/figures/01_dataset_exploration-cell9-figure1.png",
+    "results/figures/02_eeg_preprocessing-cell5-figure1.png",
+    "results/figures/02_eeg_preprocessing-cell5-figure2.png",
+    "results/figures/02_eeg_preprocessing-cell9-figure1.png",
+    "results/figures/02_eeg_preprocessing-cell9-figure2.png",
+    "results/figures/02_eeg_preprocessing-cell11-figure1.png"
+  ],
+  "scope": "Retrieval/preprocessing only; no ML model fitted or hypotheses tested.",
+  "verification_date": "2026-10-03",
+  "offline_tests": "4 passed",
+  "notebook_schema_validation": "6 passed",
+  "dependency_check": "passed"
+}

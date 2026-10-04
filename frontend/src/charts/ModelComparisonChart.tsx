@@ -1,0 +1,5 @@
+import {BarChart,Bar,XAxis,YAxis,CartesianGrid,Tooltip,ResponsiveContainer,Legend} from 'recharts';
+import {BLUE,PURPLE,GRID,axisStyle,tooltipStyle} from './theme';
+export function ModelComparisonChart({data}:{data:{model:string;accuracy:number;f1:number}[]}){return <div className="chart-frame"><ResponsiveContainer width="100%" height="100%"><BarChart data={data} margin={{top:10,right:15,left:0,bottom:0}}>
+ <CartesianGrid stroke={GRID} vertical={false}/><XAxis dataKey="model" tick={{...axisStyle,fontSize:10}} tickFormatter={v=>v==='Logistic Regression'?'Logistic Reg.':v} tickLine={false} axisLine={false}/><YAxis tick={axisStyle} domain={[0,1]} tickLine={false} axisLine={false} width={35}/><Tooltip contentStyle={tooltipStyle}/><Legend wrapperStyle={{fontSize:12,paddingTop:10}} iconType="circle" iconSize={7}/><Bar dataKey="accuracy" name="Accuracy" fill={BLUE} barSize={28} radius={[3,3,0,0]} isAnimationActive={false}/><Bar dataKey="f1" name="F1 Score" fill={PURPLE} barSize={28} radius={[3,3,0,0]} isAnimationActive={false}/>
+ </BarChart></ResponsiveContainer></div>}

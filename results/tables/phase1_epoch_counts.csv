@@ -1,0 +1,7 @@
+run,condition,n_epochs
+4,left_hand,8
+4,right_hand,7
+8,left_hand,8
+8,right_hand,7
+12,left_hand,7
+12,right_hand,8

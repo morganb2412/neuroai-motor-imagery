@@ -1,0 +1,8 @@
+import {useState} from 'react';
+import {Outlet,Link,useLocation} from 'react-router-dom';
+import {ChevronRight,FlaskConical,WifiOff,X} from 'lucide-react';
+import {AppSidebar} from '../components/AppSidebar';
+import {TopNavigation} from '../components/TopNavigation';
+import {DemoBadge} from '../components/ScientificCard';
+import {API_MODE} from '../services/api/client';
+export function AppLayout(){const [open,setOpen]=useState(false);const location=useLocation();const page=location.pathname.split('/')[1]||'explore';return <div className={open?'app menu-open':'app'}><a className="skip-link" href="#main-content">Skip to content</a><TopNavigation onMenu={()=>setOpen(!open)}/><AppSidebar/>{open&&<button className="sidebar-scrim" aria-label="Close navigation" onClick={()=>setOpen(false)}/>}<main id="main-content" className="main-content" onClick={()=>open&&setOpen(false)}><div className="workspace-line"><div><FlaskConical size={14}/><Link to="/explore">Motor Imagery Research</Link><ChevronRight size={12}/><span>{page.charAt(0).toUpperCase()+page.slice(1)}</span></div><div><span className="connection"><WifiOff size={13}/>{API_MODE==='mock'?'Backend not connected':'Live API configured · previews labeled'}</span><DemoBadge/></div></div><div className="integrity-notice"><span>Visualization preview</span> EEG signals, models and results shown here are synthetic demonstration data. Scientific hypotheses remain untested.</div><Outlet/><footer className="app-footer"><span>NeuroAI Research Platform</span><span>Reproducible research. Transparent assumptions.</span><span>UI preview · v0.1</span></footer></main></div>}

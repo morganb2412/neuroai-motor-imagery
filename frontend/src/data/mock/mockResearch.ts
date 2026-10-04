@@ -1,0 +1,8 @@
+import type { Dataset, Subject, Experiment } from '../../types/scientific';
+export const researchQuestion = 'Can machine-learning models distinguish imagined left-hand versus right-hand movement from EEG signals, and which neural features contribute most strongly to classification?';
+export const primaryHypothesis = 'EEG activity during imagined left- and right-hand movement contains distinguishable neural patterns that can be classified above chance using machine-learning methods.';
+export const secondaryHypothesis = 'EEG features associated with sensorimotor regions will contribute more strongly to classification performance than features from unrelated brain regions.';
+export const mockDataset: Dataset = {id:'eegmmidb',name:'PhysioNet EEG Motor Movement/Imagery',subjects:109,runs:14,samplingRate:160,channels:64,source:'https://physionet.org/content/eegmmidb/1.0.0/'};
+// Subject trial counts/status below are UI examples, not audited dataset inventories.
+export const mockSubjects: Subject[] = Array.from({length:8},(_,i)=>({id:i+1,availableRuns:'4, 8, 12',trials:45,status:i===0?'Preview selected':'Available in catalog'}));
+export const mockExperiments: Experiment[] = [{id:'DEMO-001',date:'2026-10-03',researchQuestion,hypothesis:primaryHypothesis,dataset:mockDataset.name,subjects:'Subject 01',preprocessing:'8–30 Hz; 1–4 s; baseline: none',model:'SVM (illustrative)',parameters:'C=1; linear kernel; seed=42',validationMethod:'Proposed: run-aware cross-validation',results:'Demo accuracy 0.82 — not measured',interpretation:'Visualization preview only; hypotheses untested.',limitations:'Synthetic data; no backend execution or scientific inference.',nextExperiment:'Connect verified EEG pipeline and prespecify evaluation.',demo:true}];

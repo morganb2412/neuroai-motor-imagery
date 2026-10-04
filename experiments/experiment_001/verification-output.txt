@@ -1,0 +1,113 @@
+MNE 1.13.2 subject 1 runs [4, 8, 12]
+<RawEDF | S001R04.edf, 64 x 60000 (375.0 s), ~29.4 MiB, data loaded>
+<Info | 9 non-empty values
+ bads: []
+ ch_names: FC5, FC3, FC1, FCz, FC2, FC4, FC6, C5, C3, C1, Cz, C2, C4, C6, ...
+ chs: 64 EEG
+ custom_ref_applied: False
+ dig: 67 items (3 Cardinal, 64 EEG)
+ highpass: 0.0 Hz
+ lowpass: 80.0 Hz
+ meas_date: 2009-08-12 16:15:00 UTC
+ nchan: 64
+ projs: []
+ sfreq: 160.0 Hz
+ subject_info: <subject_info | his_id: X, sex: 0, last_name: X>
+>
+Channels: ['FC5', 'FC3', 'FC1', 'FCz', 'FC2', 'FC4', 'FC6', 'C5', 'C3', 'C1', 'Cz', 'C2', 'C4', 'C6', 'CP5', 'CP3', 'CP1', 'CPz', 'CP2', 'CP4', 'CP6', 'Fp1', 'Fpz', 'Fp2', 'AF7', 'AF3', 'AFz', 'AF4', 'AF8', 'F7', 'F5', 'F3', 'F1', 'Fz', 'F2', 'F4', 'F6', 'F8', 'FT7', 'FT8', 'T7', 'T8', 'T9', 'T10', 'TP7', 'TP8', 'P7', 'P5', 'P3', 'P1', 'Pz', 'P2', 'P4', 'P6', 'P8', 'PO7', 'PO3', 'POz', 'PO4', 'PO8', 'O1', 'Oz', 'O2', 'Iz']
+Sampling frequency (Hz): 160.0
+Total duration (s): 374.99375
+Bad channels: []
+                     onset  duration description
+0  2009-08-12 16:15:00.000       4.2          T0
+1  2009-08-12 16:15:04.200       4.1          T2
+2  2009-08-12 16:15:08.300       4.2          T0
+3  2009-08-12 16:15:12.500       4.1          T1
+4  2009-08-12 16:15:16.600       4.2          T0
+5  2009-08-12 16:15:20.800       4.1          T1
+6  2009-08-12 16:15:24.900       4.2          T0
+7  2009-08-12 16:15:29.100       4.1          T2
+8  2009-08-12 16:15:33.200       4.2          T0
+9  2009-08-12 16:15:37.400       4.1          T2
+10 2009-08-12 16:15:41.500       4.2          T0
+11 2009-08-12 16:15:45.700       4.1          T1
+12 2009-08-12 16:15:49.800       4.2          T0
+13 2009-08-12 16:15:54.000       4.1          T2
+14 2009-08-12 16:15:58.100       4.2          T0
+15 2009-08-12 16:16:02.300       4.1          T1
+16 2009-08-12 16:16:06.400       4.2          T0
+17 2009-08-12 16:16:10.600       4.1          T2
+18 2009-08-12 16:16:14.700       4.2          T0
+19 2009-08-12 16:16:18.900       4.1          T1
+Annotation counts: T0               45
+T1               23
+T2               22
+BAD boundary      2
+EDGE boundary     2
+Name: count, dtype: int64
+Used Annotations descriptions: ['T1', 'T2']
+01_dataset_exploration:cell5:9: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+01_dataset_exploration:cell7:2: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+Explicit labels: {'left_hand': 1, 'right_hand': 2}
+Events [sample, previous value, code]:
+ [[  672     0     2]
+ [ 2000     0     1]
+ [ 3328     0     1]
+ [ 4656     0     2]
+ [ 5984     0     2]
+ [ 7312     0     1]
+ [ 8640     0     2]
+ [ 9968     0     1]
+ [11296     0     2]
+ [12624     0     1]]
+Effective window size : 2.000 (s)
+Plotting power spectral density (dB=True).
+01_dataset_exploration:cell9:3: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+Task duration min/max (s): 4.1 4.1
+MNE 1.13.2 subject 1 runs [4, 8, 12]
+Filtering raw data in 3 contiguous segments
+Setting up band-pass filter from 8 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 8.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 7.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 265 samples (1.656 s)
+
+02_eeg_preprocessing:cell5:4: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+Effective window size : 2.000 (s)
+Plotting power spectral density (dB=True).
+02_eeg_preprocessing:cell5:6: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+Used Annotations descriptions: ['T1', 'T2']
+Adding metadata with 3 columns
+45 matching events found
+No baseline correction applied
+0 projection items activated
+Using data from preloaded Raw for 45 events and 481 original time points ...
+0 bad epochs dropped
+02_eeg_preprocessing:cell9:4: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+<Epochs | 45 events (all good), 1 – 4 s (baseline off), ~10.6 MiB, data loaded, with metadata,
+ 'left_hand': 23
+ 'right_hand': 22>
+Candidate epochs: 45
+left_hand     23
+right_hand    22
+Name: retained_epochs, dtype: int64
+Series([], Name: count, dtype: int64)
+run  condition 
+4    left_hand     8
+     right_hand    7
+8    left_hand     8
+     right_hand    7
+12   left_hand     7
+     right_hand    8
+Name: n_epochs, dtype: int64
+Effective window size : 2.000 (s)
+Effective window size : 2.000 (s)
+02_eeg_preprocessing:cell11:13: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+{"status": "passed", "retained_epochs": {"left_hand": 23, "right_hand": 22}, "candidate_epochs": 45, "channels": 64, "sfreq": 160.0}

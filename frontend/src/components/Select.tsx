@@ -1,0 +1,2 @@
+import type {ReactNode} from 'react';
+export function Select({label,value,onChange,children,compact=false}:{label:string;value:string|number;onChange:(value:string)=>void;children:ReactNode;compact?:boolean}){return <label className={compact?'select-field compact':'select-field'}><span>{label}</span><select value={value} onChange={e=>onChange(e.target.value)} aria-label={label}>{children}</select></label>}

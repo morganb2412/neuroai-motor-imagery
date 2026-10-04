@@ -1,0 +1,18 @@
+{
+  "experiment_id": "experiment_001",
+  "subject": 1,
+  "runs": [
+    4,
+    8,
+    12
+  ],
+  "l_freq": 8.0,
+  "h_freq": 30.0,
+  "tmin": 1.0,
+  "tmax": 4.0,
+  "baseline": null,
+  "reject": null,
+  "reference": "as recorded",
+  "random_state": 42,
+  "dataset_version": "1.0.0"
+}

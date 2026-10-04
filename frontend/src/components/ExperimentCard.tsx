@@ -1,0 +1,4 @@
+import {DemoBadge} from './ScientificCard';
+import type {Experiment} from '../types/scientific';
+const fields:[keyof Experiment,string][]=[['researchQuestion','Research Question'],['hypothesis','Hypothesis'],['dataset','Dataset'],['subjects','Subjects'],['preprocessing','Preprocessing'],['model','Model'],['parameters','Parameters'],['validationMethod','Validation Method'],['results','Results'],['interpretation','Interpretation'],['limitations','Limitations'],['nextExperiment','Next Experiment']];
+export function ExperimentCard({experiment}:{experiment:Experiment}){return <article className="experiment-card"><header><div><span className="eyebrow">EXPERIMENT ID</span><h3>{experiment.id}</h3></div><div className="experiment-date"><span>Date: {experiment.date}</span><DemoBadge/></div></header><dl>{fields.map(([key,label])=><div key={key}><dt>{label}</dt><dd>{String(experiment[key])}</dd></div>)}</dl></article>}

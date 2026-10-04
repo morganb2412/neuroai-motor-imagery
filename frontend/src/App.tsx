@@ -1,0 +1,8 @@
+import {lazy,Suspense,useEffect} from 'react';
+import {BrowserRouter,Routes,Route,Navigate,useLocation} from 'react-router-dom';
+import {ResearchProvider} from './hooks/useResearchData';
+import {AppLayout} from './layouts/AppLayout';
+import ExplorePage from './pages/ExplorePage';
+const DataPage=lazy(()=>import('./pages/DataPage'));const PreprocessPage=lazy(()=>import('./pages/PreprocessPage'));const ModelsPage=lazy(()=>import('./pages/ModelsPage'));const VisualizationsPage=lazy(()=>import('./pages/VisualizationsPage'));const ResultsPage=lazy(()=>import('./pages/ResultsPage'));const ResearchPage=lazy(()=>import('./pages/ResearchPage'));const ExportPage=lazy(()=>import('./pages/ExportPage'));
+function RouteScroll(){const {pathname,hash}=useLocation();useEffect(()=>{if(hash){const timer=setTimeout(()=>document.getElementById(hash.slice(1))?.scrollIntoView({block:'start'}),400);return()=>clearTimeout(timer)}window.scrollTo(0,0)},[pathname,hash]);return null;}
+export default function App(){return <BrowserRouter><ResearchProvider><RouteScroll/><Suspense fallback={<div className="route-loading" role="status">Loading workspace…</div>}><Routes><Route element={<AppLayout/>}><Route index element={<Navigate to="/explore" replace/>}/><Route path="explore" element={<ExplorePage/>}/><Route path="data" element={<DataPage/>}/><Route path="preprocess" element={<PreprocessPage/>}/><Route path="models" element={<ModelsPage/>}/><Route path="visualizations" element={<VisualizationsPage/>}/><Route path="results" element={<ResultsPage/>}/><Route path="research" element={<ResearchPage/>}/><Route path="export" element={<ExportPage/>}/><Route path="*" element={<Navigate to="/explore" replace/>}/></Route></Routes></Suspense></ResearchProvider></BrowserRouter>}
