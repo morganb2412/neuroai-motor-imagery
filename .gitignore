@@ -39,3 +39,6 @@ video/public/audio/voiceover/*.wav
 
 video/.validation-ai/
 video/public/audio/.validation-ai/
+
+# Keep video production files local only
+/video/

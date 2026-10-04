@@ -1,1 +1,0 @@
-export {AnimatedModelPipeline} from './Charts';

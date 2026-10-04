@@ -1,1 +1,0 @@
-export {MotorImageryScene} from './Scenes';

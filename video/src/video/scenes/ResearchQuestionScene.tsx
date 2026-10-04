@@ -1,1 +1,0 @@
-export {ResearchQuestionScene} from './Scenes';

@@ -86,10 +86,3 @@ python experiments/experiment_001/verify_phase1.py
 The separate React/Vite app is in [`frontend/`](frontend/README.md). It uses synthetic
 UI demonstrations and does not alter the verified Python pipeline or establish model
 results. Run `npm ci` then `npm run dev` from that directory.
-
-## Research video
-The complete React/TypeScript Remotion video is in [`video/`](video/README.md).
-Composition `MoeNeuroAIResearchTikTok` renders a silent 60-second 1080×1920 video
-at 30 FPS to `out/moe-neuroai-research-tiktok.mp4`. Scientific animations are
-explicitly illustrative. The video guide covers preview, rendering, adding your
-recorded voiceover, optional captions and changing scene durations.

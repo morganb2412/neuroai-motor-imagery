@@ -1,1 +1,0 @@
-export {AnimatedMetrics} from './Charts';
